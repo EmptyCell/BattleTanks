@@ -2,8 +2,11 @@
 
 #include "BattleTank/BattleTank.h"
 #include "Engine/World.h"
-#include "Public/TankAIController.h"
 #include "GameFramework/Actor.h"
+#include "Public/TankAIController.h"
+#include "Public/Tank.h"
+
+
 
 void ATankAIController::BeginPlay()
 {
