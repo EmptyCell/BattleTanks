@@ -15,10 +15,6 @@ class BATTLETANK_API ATank : public APawn
 	GENERATED_BODY()
 
 public:
-
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	void AimAt(FVector HitLocation);
 
 	UFUNCTION(BlueprintCallable, Category = Setup)

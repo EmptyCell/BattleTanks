@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BattleTank/BattleTank.h"
+#include "Engine/World.h"
 #include "Public/TankAIController.h"
 #include "GameFramework/Actor.h"
 
