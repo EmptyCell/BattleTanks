@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "Public/Tank.h"
 #include "BattleTank/BattleTank.h"
 #include "Public/TankAimingComponent.h"
-#include "Public/Tank.h"
 
 
 // Sets default values
@@ -12,6 +12,11 @@ ATank::ATank()
 	PrimaryActorTick.bCanEverTick = false;
 
 	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));
+}
+
+void ATank::SetTurretReference(UTankTurret* TurretToSet)
+{
+	TankAimingComponent->SetTurretReference(TurretToSet);
 }
 
 void ATank::SetBarrelReference(UTankBarrel* BarrelToSet)
