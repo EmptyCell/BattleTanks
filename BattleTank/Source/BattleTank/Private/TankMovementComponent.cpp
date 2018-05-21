@@ -3,6 +3,7 @@
 #include "Public/TankMovementComponent.h"
 #include "BattleTank/BattleTank.h"
 #include "Public/TankTrack.h"
+// Depends on movement component via pathfinding system
 
 void UTankMovementComponent::Initialise(UTankTrack* LeftTrackToSet, UTankTrack* RightTrackToSet)
 {

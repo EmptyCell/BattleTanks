@@ -4,8 +4,6 @@
 #include "Public/Projectile.h"
 #include "Public/TankBarrel.h"
 #include "BattleTank/BattleTank.h"
-#include "Public/TankAimingComponent.h"
-#include "Public/TankMovementComponent.h"
 #include "Engine/World.h"
 
 
@@ -14,6 +12,11 @@ ATank::ATank()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
+}
+
+void ATank::BeginPlay()
+{
+	Super::BeginPlay(); // Needed for BP Begin Play to run!
 }
 
 void ATank::Fire()
@@ -31,10 +34,4 @@ void ATank::Fire()
 		Projectile->LaunchProjectile(LaunchSpeed);
 		LastFireTime = FPlatformTime::Seconds();
 	}
-}
-
-void ATank::AimAt(FVector HitLocation)
-{
-	if (!ensure(TankAimingComponent)) { return; }
-	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
 }
