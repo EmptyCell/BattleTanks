@@ -1,4 +1,5 @@
 # Visual Studio 2015 user specific files
+BattleTank.VC.VC.opendb
 .vs/
 
 # Visual Studio 2015 database file
@@ -73,6 +74,3 @@ Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
-
-# Starter Content for UE4
-Content/StarterContent/*
